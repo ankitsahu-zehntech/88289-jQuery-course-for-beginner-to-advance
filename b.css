@@ -1,0 +1,95 @@
+body {
+           
+    margin: 0;
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+}
+
+.box {
+    height: 60px;
+    width: 200px;
+    border-radius: 70px;
+    background-color: #007bff;
+    transition: margin-left 1s;
+}
+
+.box-1 {
+    position: absolute;
+    background-color: #007bff;
+    z-index: 2;
+}
+
+.box-2 {
+    background-color: white;
+}
+
+.shifted {
+    margin-left: -10px;
+}
+
+.progress-holder{
+width: 0;
+    height: 5px;
+   
+    background-color: lightgreen;
+    position: absolute;
+    
+    left: 70px;
+    top: 50%;
+    transform: translateY(-70%);
+    display: none;
+}
+.progress-line {
+    width: 0;
+    height: 5px;
+   
+    background-color: lightgreen;
+    position: absolute;
+    
+    left: 70px;
+    top: 50%;
+    transform: translateY(-70%);
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.small-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+   
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    
+    
+    display: none;
+    animation: spin 0.5s linear infinite;
+    display: none;
+}
+.tick-mark {
+font-size: 30px;
+color: white;
+display: none; 
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); 
+}
